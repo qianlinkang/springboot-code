@@ -1,0 +1,50 @@
+server:
+  port: 8081
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.39.10:3306/itheima?serverTimezone=UTC
+      username: dev
+      password: ?7h3{<+2{47!..H
+
+  # 配置ehcache缓存
+#  cache:
+#    type: ehcache
+#    ehcache:
+#      config: ehcache.xml
+
+
+  #redis缓存
+  cache:
+    type: redis
+    redis:
+      use-key-prefix: true  # 带name前缀
+      key-prefix: sms_
+      cache-null-values: false
+      time-to-live: 10s
+  redis:
+    host: 192.168.39.10
+    port: 6379
+
+#memcached:
+#  servers: localhost:11211
+#  poolSize: 10
+#  opTimeout: 3000
+
+
+
+
+
+
+
+

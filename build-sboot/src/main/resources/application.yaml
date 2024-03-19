@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+
+custom.user:
+  name: qlk
+  password: 123
+
+# 配置druid数据源(jar包版本)
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://192.168.39.10:3306/itheima?serverTimezone=UTC
+#    username: dev
+#    password: ?7h3{<+2{47!..H
+#    type: com.alibaba.druid.pool.DruidDataSource
+
+# 配置druid数据源(starter版本)
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.39.10:3306/itheima?serverTimezone=UTC
+      username: dev
+      password: ?7h3{<+2{47!..H
+

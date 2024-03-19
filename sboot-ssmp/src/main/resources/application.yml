@@ -1,0 +1,33 @@
+#server:
+#  port: 81
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+spring:
+  profiles:
+    active: @profile.active@
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.39.10:3306/itheima?serverTimezone=UTC
+    username: dev
+    password: ?7h3{<+2{47!..H
+
+knife4j:
+  # 启用
+  enable: true
+  # 增强配置
+  setting:
+    language: zh-CN
+  # 开启认证
+  basic:
+    username: admin
+    password: 123
+    enable: true
+  # 生产环境,开启屏蔽文档资源
+  production: false

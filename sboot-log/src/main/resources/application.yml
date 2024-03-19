@@ -1,0 +1,25 @@
+logging:
+  # 设置日志级别
+  level:
+    root: info
+    # 包
+    org.sboot.controller: debug
+    # 组
+    ebank: debug
+  # 设置自定义日志组
+  group:
+    ebank: org.sboot.service.impl
+
+  pattern:
+    console: "%d %clr(%5p) --- [%16t] %clr(%-40.40c){cyan} : %m %n"
+    #    console: "%d %clr(%5p) %n"
+    #    console: "%d - %m %n"
+    #    console: "%d %5p %n"
+  file:
+    name: server.log
+  logback:
+    rollingpolicy:
+      max-file-size: 4KB
+      file-name-pattern: server.%d{yyyy-MM-dd}.%i.log
+
+
